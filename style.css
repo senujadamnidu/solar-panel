@@ -77,6 +77,81 @@ p { color: var(--text-dark); margin-bottom: 15px; }
     margin-left: 30px;
 }
 
+.logo {
+  height: 70px;  /* increase this value to make it bigger */
+  width: auto;   /* keeps aspect ratio */
+  margin-right: 15px; /* optional, adds spacing */
+}
+
+
+header nav {
+  display: flex;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+header nav img.logo {
+  flex-shrink: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: white;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 70px; /* make it bigger */
+  width: auto;
+  margin-right: 15px;
+}
+
+.brand-name h1 {
+  font-size: 20px;
+  margin: 0;
+  color: #000;
+}
+
+.brand-name p {
+  font-size: 12px;
+  margin: 0;
+  color: #555;
+}
+
+#hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('your-image.jpg'); /* replace with your image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);  /* adjust blur intensity */
+    transform: scale(1.05); /* prevent edges showing due to blur */
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* make sure content is above blurred background */
+}
+
+
 .nav-links a {
     text-decoration: none;
     color: var(--primary-dark-blue);
