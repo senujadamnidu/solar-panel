@@ -165,17 +165,149 @@
             </div>
         </section>
 
-        <section id="projects" class="content-section">
-            <h2>Our Latest Installations</h2>
-            <div class="gallery-grid">
-                <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762791497/6091439360600378711_g6bpjy.jpg" alt="Solar Project 1">
-                <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762791497/6091439360600378717_l7jgr4.jpg" alt="Solar Project 2">
-                <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762791497/6091439360600378706_ktpznn.jpg" alt="Solar Project 3">
-                <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762791496/6091439360600378713_rr4fdt.jpg" alt="Solar Project 4">
-                <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762791479/6091439360600378707_p2jey0.jpg" alt="Solar Project 5">
-                <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762791497/6091439360600378706_ktpznn.jpg" alt="Solar Project 6">
-                </div>
-        </section>
+      <section id="projects" class="content-section">
+  <h2>Our Latest Installations</h2>
+
+  <div class="slider">
+    <div class="slides">
+      <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762791497/6091439360600378711_g6bpjy.jpg" alt="Solar Project 1" class="active">
+      <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762791497/6091439360600378717_l7jgr4.jpg" alt="Solar Project 2">
+      <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762791497/6091439360600378706_ktpznn.jpg" alt="Solar Project 3">
+      <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762791496/6091439360600378713_rr4fdt.jpg" alt="Solar Project 4">
+      <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762791479/6091439360600378707_p2jey0.jpg" alt="Solar Project 5">
+    </div>
+
+    <!-- Navigation buttons -->
+    <button class="nav prev">❮</button>
+    <button class="nav next">❯</button>
+  </div>
+</section>
+
+<style>
+/* ===== WHITE SECTION ===== */
+#projects {
+  padding: 80px 20px;
+  background: #fff;
+  color: #000;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #00c97f;
+  text-shadow: 0 0 15px rgba(0, 255, 150, 0.6);
+}
+
+/* ===== SLIDER ===== */
+.slider {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 150, 0.3);
+  background: #f8f8f8;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slides img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 20px;
+}
+
+.slides img.active {
+  opacity: 1;
+}
+
+/* ===== BUTTONS ===== */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 200, 120, 0.3);
+  color: #000;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 10px 18px;
+  border-radius: 50%;
+  transition: 0.3s;
+  backdrop-filter: blur(5px);
+}
+
+.nav:hover {
+  background: #00ffb7;
+  color: #fff;
+  box-shadow: 0 0 20px #00ffb7;
+}
+
+.nav.prev {
+  left: 20px;
+}
+
+.nav.next {
+  right: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .slider {
+    height: 300px;
+  }
+
+  #projects h2 {
+    font-size: 2rem;
+  }
+
+  .nav {
+    font-size: 2rem;
+    padding: 8px 14px;
+  }
+}
+</style>
+
+<script>
+let slides = document.querySelectorAll(".slides img");
+let current = 0;
+
+function showSlide(index) {
+  slides.forEach((img, i) => {
+    img.classList.toggle("active", i === index);
+  });
+}
+
+document.querySelector(".next").addEventListener("click", () => {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+});
+
+document.querySelector(".prev").addEventListener("click", () => {
+  current = (current - 1 + slides.length) % slides.length;
+  showSlide(current);
+});
+
+// Auto-slide every 5 seconds
+setInterval(() => {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+}, 5000);
+</script>
+
 
         <section id="contact" class="cta-section">
             <h2>Ready to Go Solar?</h2>
