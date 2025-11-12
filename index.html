@@ -30,49 +30,95 @@
         </nav>
     </header>
 
-    <main>
-        <section id="hero">
-            <div class="hero-content">
-                <h1>Powering a Brighter Future</h1>
-                <p>Your trusted partner for residential & commercial solar solutions.</p>
-                <a href="#services" class="cta-button hero-cta">Explore Our Solutions</a>
-            </div>
-        </section>
+  <main>
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Powering a Brighter Future</h1>
+      <p>Your trusted partner for residential & commercial solar solutions.</p>
+      <a href="#services" class="cta-button hero-cta">Explore Our Solutions</a>
+    </div>
+  </section>
+</main>
 
-        <style>
-   
-</style>
-
-
-
-        <style>
-
- #hero {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
+<style>
+/* ===== HERO SECTION ===== */
+#hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
 }
 
+/* ===== BACKGROUND SLIDESHOW ===== */
 #hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://res.cloudinary.com/dt10f7l4l/image/upload/v1762793827/Pixabay_Sonnenuntergang_Solarpark_ai-generated-8886042_1280-1024x512_onhevc.jpg'); /* replace with your image */
-    background-size: cover;
-    background-position: center;
-    filter: blur(8px);  /* adjust blur intensity */
-    transform: scale(1.05); /* prevent edges showing due to blur */
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: slideshow 20s infinite linear;
+  filter: brightness(60%) blur(4px);
+  transform: scale(1.05);
+  z-index: 0;
 }
 
+/* ===== SLIDESHOW ANIMATION ===== */
+@keyframes slideshow {
+  0% {
+    background-image: url('https://res.cloudinary.com/dt10f7l4l/image/upload/v1762793827/Pixabay_Sonnenuntergang_Solarpark_ai-generated-8886042_1280-1024x512_onhevc.jpg');
+  }
+  33% {
+    background-image: url(' https://res.cloudinary.com/dt10f7l4l/image/upload/v1762944695/1661582211d5b12e6cf6d6d485108efb_ypfclf.jpg');
+  }
+  66% {
+    background-image: url('https://res.cloudinary.com/dt10f7l4l/image/upload/v1762944694/3cf48235ab25a3fcd91d2c5a88d7b601_mweef5.jpg');
+  }
+  100% {
+    background-image: url('https://res.cloudinary.com/dt10f7l4l/image/upload/v1762944799/7085b3cb9d132e0258c2b7f4b32725d9_mrxjni.jpg');
+  }
+}
+
+/* ===== CONTENT ===== */
 .hero-content {
-    position: relative;
-    z-index: 1; /* make sure content is above blurred background */
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
 }
 
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+.cta-button {
+  background: linear-gradient(90deg, #00ff87, #00c4ff);
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #00ffcc;
+}
 </style>
 
 
