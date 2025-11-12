@@ -307,13 +307,112 @@ setInterval(() => {
   showSlide(current);
 }, 5000);
 </script>
+<section id="contact" class="cta-section">
+    <h2>Ready to Go Solar?</h2>
+    <p>Contact us today for a free, no-obligation consultation and personalized quote.</p>
+    
+    <form id="whatsappForm" class="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <input type="text" id="address" placeholder="Address" required>
+        <input type="text" id="city" placeholder="City" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="cta-button hero-cta">Send via WhatsApp</button>
+    </form>
+</section>
 
+<style>
+/* General Section Styling */
+#contact {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
 
-        <section id="contact" class="cta-section">
-            <h2>Ready to Go Solar?</h2>
-            <p>Contact us today for a free, no-obligation consultation and personalized quote.</p>
-            <a href="mailto:info@sunandsons.com" class="cta-button hero-cta">Get Your Free Quote Now</a>
-        </section>
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+#contact p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+/* Form Styling */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #4CAF50; /* Green highlight */
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Button Styling */
+.cta-button.hero-cta {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button.hero-cta:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+</style>
+
+<script>
+document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const city = document.getElementById('city').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    const text = `Hello! I want a solar consultation.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nAddress: ${address}\nCity: ${city}\nMessage: ${message}`;
+    const phoneNumber = '94773964804'; // Sri Lanka country code
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+    
+    window.open(url, '_blank');
+});
+</script>
+
     </main>
 
     <footer>
