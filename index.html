@@ -406,7 +406,7 @@ document.getElementById('whatsappForm').addEventListener('submit', function(e) {
     const message = document.getElementById('message').value.trim();
 
     const text = `Hello! I want a solar consultation.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nAddress: ${address}\nCity: ${city}\nMessage: ${message}`;
-    const phoneNumber = '94773964804'; // Sri Lanka country code
+    const phoneNumber = '+94772863414'; // Sri Lanka country code
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
     
     window.open(url, '_blank');
