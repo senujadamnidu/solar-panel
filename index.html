@@ -5,105 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sun & Son's Solar Energy - Powering Your Future</title>
     <link rel="stylesheet" href="style.css">
-     <link rel="icon" href="favicon.ico">
-
+    <link rel="icon" href="images/logo.png">
 </head>
+
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                 <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762797125/Untitled_design_1_rysert.png" alt="Sun & Son's Solar Energy Logo" class="logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-            <a href="#contact" class="cta-button nav-cta">Get a Free Quote! </a>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        </nav>
-    </header>
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762797125/Untitled_design_1_rysert.png" 
+                 alt="Sun & Son's Solar Energy Logo">
+        </div>
 
-  <main>
-  <section id="hero">
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+
+        <a href="#contact" class="cta-button nav-cta">Get a Free Quote</a>
+
+        <div class="hamburger">
+            <div class="line"></div><div class="line"></div><div class="line"></div>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section id="hero">
     <div class="hero-content">
-      <h1>Powering a Brighter Future</h1>
-      <p>Your trusted partner for residential & commercial solar solutions.</p>
-      <a href="#services" class="cta-button hero-cta">Explore Our Solutions</a>
+        <h1>Powering a Brighter Future</h1>
+        <p>Your trusted partner for residential & commercial solar solutions.</p>
+        <a href="#services" class="cta-button hero-cta">Explore Our Solutions</a>
     </div>
-  </section>
-</main>
+</section>
 
 <style>
-/* ===== HERO SECTION ===== */
 #hero {
   position: relative;
   height: 100vh;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  color: #fff;
+  color: white;
 }
 
-/* ===== BACKGROUND SLIDESHOW ===== */
 #hero::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   animation: slideshow 20s infinite linear;
   filter: brightness(60%) blur(4px);
-  transform: scale(1.05);
-  z-index: 0;
 }
 
-/* ===== SLIDESHOW ANIMATION ===== */
 @keyframes slideshow {
-  0% {
-    background-image: url('https://res.cloudinary.com/dt10f7l4l/image/upload/v1762793827/Pixabay_Sonnenuntergang_Solarpark_ai-generated-8886042_1280-1024x512_onhevc.jpg');
-  }
-  33% {
-    background-image: url(' https://res.cloudinary.com/dt10f7l4l/image/upload/v1762944695/1661582211d5b12e6cf6d6d485108efb_ypfclf.jpg');
-  }
-  66% {
-    background-image: url('https://res.cloudinary.com/dt10f7l4l/image/upload/v1762944694/3cf48235ab25a3fcd91d2c5a88d7b601_mweef5.jpg');
-  }
-  100% {
-    background-image: url('https://res.cloudinary.com/dt10f7l4l/image/upload/v1762944799/7085b3cb9d132e0258c2b7f4b32725d9_mrxjni.jpg');
-  }
+  0% { background-image: url('https://res.cloudinary.com/dt10f7l4l/image/upload/v1762793827/Pixabay_Sonnenuntergang_Solarpark_ai-generated-8886042_1280-1024x512_onhevc.jpg'); }
+  33% { background-image: url('https://res.cloudinary.com/dt10f7l4l/image/upload/v1762944695/1661582211d5b12e6cf6d6d485108efb_ypfclf.jpg'); }
+  66% { background-image: url('https://res.cloudinary.com/dt10f7l4l/image/upload/v1762944694/3cf48235ab25a3fcd91d2c5a88d7b601_mweef5.jpg'); }
+  100% { background-image: url('https://res.cloudinary.com/dt10f7l4l/image/upload/v1762944799/7085b3cb9d132e0258c2b7f4b32725d9_mrxjni.jpg'); }
 }
 
-/* ===== CONTENT ===== */
 .hero-content {
   position: relative;
-  z-index: 1;
-  max-width: 800px;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 15px rgba(0,0,0,0.6);
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #ddd;
+  z-index: 2;
+  text-align: center;
 }
 
 .cta-button {
@@ -111,203 +82,216 @@
   padding: 12px 28px;
   border-radius: 30px;
   text-decoration: none;
-  color: #000;
   font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 20px #00ffcc;
+  color: #000;
 }
 </style>
 
+<!-- ================= ABOUT ================= -->
+<section id="about" class="content-section">
+    <h2>Experience the Sun & Son's Difference</h2>
 
-        <section id="about" class="content-section">
-            <h2>Experience the Sun & Son's Difference</h2>
-            <div class="why-us-grid">
-                <div class="why-us-card">
-                    <h3>⚡️ Expert Installation</h3>
-                    <p>Our certified technicians ensure a flawless and efficient setup, guaranteeing optimal performance and longevity for your solar system.</p>
-                </div>
-                <div class="why-us-card">
-                    <h3>☀️ High-Quality Products</h3>
-                    <p>We use only tier-1 solar panels and advanced inverters, selected for their durability, efficiency, and industry-leading warranties.</p>
-                </div>
-                <div class="why-us-card">
-                    <h3>🤝 Customer Service</h3>
-                    <p>Your satisfaction is our priority, from the initial consultation and custom design to post-installation support and maintenance.</p>
-                </div>
-                <div class="why-us-card">
-                    <h3>✅ Reliable & Sustainable</h3>
-                    <p>Invest in a reliable, eco-friendly energy solution that reduces your carbon footprint and provides long-term energy independence.</p>
-                </div>
-            </div>
-        </section>
+    <div class="why-us-grid">
 
-        <section id="services" class="content-section">
-            <h2>Our Comprehensive Solar Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762792089/6fe6bb7ce23ad80956bab10b57eea863_x7uq70.jpg" alt="Residential Solar">
-                    <h3>Residential Solar</h3>
-                    <p>Lower your electric bills, increase your home's value, and enjoy energy independence with a custom residential solar installation.</p>
-                </div>
-                <div class="service-card">
-                    <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762790346/fd5ad9cb1c82f40a95091551f5a15759_mbdf2p.jpg" alt="Commercial Solar">
-                    <h3>Commercial Solar</h3>
-                    <p>Reduce operating costs, achieve sustainability goals, and enhance your brand image with robust commercial solar solutions.</p>
-                </div>
-                <div class="service-card">
-                    <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762792165/507f5a09aa2d7a36b04655656c49f1f3_oeouqa.jpg" alt="Solar Maintenance">
-                    <h3>Maintenance & Repair</h3>
-                    <p>Ensure your solar system performs optimally for years to come with our proactive maintenance plans and prompt repair services.</p>
-                </div>
-            </div>
-        </section>
+        <div class="why-us-card">
+            <h3>⚡ Expert Installation</h3>
+            <p>Certified technicians guarantee optimal performance and long-term durability.</p>
+        </div>
 
-      <section id="projects" class="content-section">
-  <h2>Our Latest Installations</h2>
+        <div class="why-us-card">
+            <h3>☀ High-Quality Products</h3>
+            <p>Tier-1 solar panels & advanced inverters with industry-leading warranties.</p>
+        </div>
 
-  <div class="slider">
-    <div class="slides">
-      <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762791497/6091439360600378711_g6bpjy.jpg" alt="Solar Project 1" class="active">
-      <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762791497/6091439360600378717_l7jgr4.jpg" alt="Solar Project 2">
-      <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762791497/6091439360600378706_ktpznn.jpg" alt="Solar Project 3">
-      <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762791496/6091439360600378713_rr4fdt.jpg" alt="Solar Project 4">
-      <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762791479/6091439360600378707_p2jey0.jpg" alt="Solar Project 5">
+        <div class="why-us-card">
+            <h3>🤝 Customer Service</h3>
+            <p>From consultation to installation — full support every step of the way.</p>
+        </div>
+
+        <div class="why-us-card">
+            <h3>✅ Reliable & Sustainable</h3>
+            <p>Eco-friendly energy solutions that reduce costs and protect the planet.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="content-section">
+    <h2>Our Comprehensive Solar Services</h2>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762792089/6fe6bb7ce23ad80956bab10b57eea863_x7uq70.jpg">
+            <h3>Residential Solar</h3>
+            <p>Custom solar setups designed to reduce your home electricity bills.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762790346/fd5ad9cb1c82f40a95091551f5a15759_mbdf2p.jpg">
+            <h3>Commercial Solar</h3>
+            <p>Reliable power solutions to cut operating costs and increase efficiency.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762792165/507f5a09aa2d7a36b04655656c49f1f3_oeouqa.jpg">
+            <h3>Maintenance & Repair</h3>
+            <p>Scheduled cleaning, servicing, inspections, and fast repairs.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= PROJECTS (POWER HANDS ENERGY STYLE) ================= -->
+<section id="projects" class="projects-grid-section">
+  <h2 class="projects-title">Our Latest Projects</h2>
+
+  <div class="projects-grid">
+
+    <!-- PROJECT 1 -->
+    <div class="project-card-grid">
+      <div class="project-images-grid">
+        <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1764168331/image_ofpvnw.jpg">
+        <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1764168365/ima2ge_dkkgx1.jpg">
+        <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1764168393/im1age_qnczqs.jpg">
+      </div>
+      <div class="project-info-grid">
+        <p class="project-date-grid">Oct 11, 2025</p>
+        <h3 class="project-title-grid">5 Kw residential Solar project - Yakkala</h3>
+        <a href="#" class="read-more-grid">Read More →</a>
+      </div>
     </div>
 
-    <!-- Navigation buttons -->
-    <button class="nav prev">❮</button>
-    <button class="nav next">❯</button>
+    <!-- PROJECT 2 -->
+    <div class="project-card-grid">
+      <div class="project-images-grid">
+        <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1764168777/image_ujfro1.jpg">
+        <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1764168763/imag1e_frlklg.jpg">
+        <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1764168774/im2age_uqfrvi.jpg">
+      </div>
+      <div class="project-info-grid">
+        <p class="project-date-grid">Oct 03, 2025</p>
+        <h3 class="project-title-grid">5 Kw residential Solar project - Katunayaka</h3>
+        <a href="#" class="read-more-grid">Read More →</a>
+      </div>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="project-card-grid">
+      <div class="project-images-grid">
+        <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1764169060/image_tv0usv.jpg">
+        <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1764169057/imag1e_bkq6nv.jpg">
+        <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1764169056/ima11ge_mqpjrg.jpg">
+      </div>
+      <div class="project-info-grid">
+        <p class="project-date-grid">Oct 18, 2024</p>
+        <h3 class="project-title-grid">5 Kw residential Solar project - Gampaha</h3>
+        <a href="#" class="read-more-grid">Read More →</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <style>
-/* ===== WHITE SECTION ===== */
-#projects {
+/* PROJECTS SECTION */
+.projects-grid-section {
   padding: 80px 20px;
-  background: #fff;
-  color: #000;
+  background: #ffffff;
   text-align: center;
 }
 
-#projects h2 {
-  font-size: 2.5rem;
+.projects-title {
+  font-size: 2.8rem;
+  font-weight: 700;
   margin-bottom: 40px;
   color: #00c97f;
-  text-shadow: 0 0 15px rgba(0, 255, 150, 0.6);
+  text-shadow: 0 0 10px rgba(0, 200, 120, 0.3);
 }
 
-/* ===== SLIDER ===== */
-.slider {
-  position: relative;
+/* PROJECTS GRID */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 35px;
   width: 90%;
-  max-width: 1000px;
-  height: 500px;
   margin: 0 auto;
+}
+
+/* PROJECT CARD */
+.project-card-grid {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 0 30px rgba(0, 255, 150, 0.3);
-  background: #f8f8f8;
-}
-
-.slides {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.slides img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  border-radius: 20px;
-}
-
-.slides img.active {
-  opacity: 1;
-}
-
-/* ===== BUTTONS ===== */
-.nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 200, 120, 0.3);
-  color: #000;
-  border: none;
-  font-size: 2.5rem;
-  cursor: pointer;
-  padding: 10px 18px;
-  border-radius: 50%;
   transition: 0.3s;
-  backdrop-filter: blur(5px);
+  padding-bottom: 20px;
 }
 
-.nav:hover {
-  background: #00ffb7;
-  color: #fff;
-  box-shadow: 0 0 20px #00ffb7;
+.project-card-grid:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 25px rgba(0,0,0,0.18);
 }
 
-.nav.prev {
-  left: 20px;
+/* IMAGE GRID INSIDE PROJECT CARD */
+.project-images-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  background: #f5f5f5;
+  padding: 6px;
 }
 
-.nav.next {
-  right: 20px;
+.project-images-grid img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
-/* ===== RESPONSIVE ===== */
+/* PROJECT TEXT */
+.project-info-grid {
+  padding: 18px;
+  text-align: left;
+}
+
+.project-date-grid {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.project-title-grid {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.read-more-grid {
+  color: #00c97f;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.read-more-grid:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE FIX */
 @media (max-width: 768px) {
-  .slider {
-    height: 300px;
+  .project-images-grid img {
+    height: 100px;
   }
-
-  #projects h2 {
-    font-size: 2rem;
-  }
-
-  .nav {
-    font-size: 2rem;
-    padding: 8px 14px;
+  .projects-title {
+    font-size: 2.2rem;
   }
 }
 </style>
 
-<script>
-let slides = document.querySelectorAll(".slides img");
-let current = 0;
-
-function showSlide(index) {
-  slides.forEach((img, i) => {
-    img.classList.toggle("active", i === index);
-  });
-}
-
-document.querySelector(".next").addEventListener("click", () => {
-  current = (current + 1) % slides.length;
-  showSlide(current);
-});
-
-document.querySelector(".prev").addEventListener("click", () => {
-  current = (current - 1 + slides.length) % slides.length;
-  showSlide(current);
-});
-
-// Auto-slide every 5 seconds
-setInterval(() => {
-  current = (current + 1) % slides.length;
-  showSlide(current);
-}, 5000);
-</script>
+<!-- ================= CONTACT SECTION ================= -->
 <section id="contact" class="cta-section">
     <h2>Ready to Go Solar?</h2>
     <p>Contact us today for a free, no-obligation consultation and personalized quote.</p>
@@ -324,16 +308,14 @@ setInterval(() => {
 </section>
 
 <style>
-/* General Section Styling */
 #contact {
     background-color: #f9f9f9;
     padding: 60px 20px;
     text-align: center;
-    font-family: 'Arial', sans-serif;
 }
 
 #contact h2 {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     margin-bottom: 10px;
     color: #222;
 }
@@ -344,10 +326,10 @@ setInterval(() => {
     color: #555;
 }
 
-/* Form Styling */
+/* Contact Form */
 .contact-form {
     max-width: 600px;
-    margin: 0 auto;
+    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -355,43 +337,35 @@ setInterval(() => {
 
 .contact-form input,
 .contact-form textarea {
-    padding: 12px 15px;
+    padding: 14px;
     border: 1px solid #ccc;
     border-radius: 10px;
     font-size: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #4CAF50; /* Green highlight */
-    box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
+    border-color: #00c97f;
+    box-shadow: 0 0 10px rgba(0,200,120,0.25);
     outline: none;
 }
 
 .contact-form textarea {
-    resize: vertical;
-    min-height: 100px;
+    min-height: 120px;
 }
 
-/* Button Styling */
+/* WhatsApp Button */
 .cta-button.hero-cta {
-    background-color: #4CAF50;
+    background-color: #00c97f !important;
     color: #fff;
     padding: 15px;
     font-size: 1.1rem;
-    border: none;
     border-radius: 12px;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
 .cta-button.hero-cta:hover {
-    background-color: #45a049;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    background-color: #00a56b;
 }
 </style>
 
@@ -399,52 +373,121 @@ setInterval(() => {
 document.getElementById('whatsappForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const address = document.getElementById('address').value.trim();
-    const city = document.getElementById('city').value.trim();
-    const message = document.getElementById('message').value.trim();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const address = document.getElementById('address').value;
+    const city = document.getElementById('city').value;
+    const message = document.getElementById('message').value;
 
-    const text = `Hello! I want a solar consultation.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nAddress: ${address}\nCity: ${city}\nMessage: ${message}`;
-    const phoneNumber = '+94772863414'; // Sri Lanka country code
+    const text = `Hello! I want a solar consultation.\n\n` +
+                 `Name: ${name}\n` +
+                 `Email: ${email}\n` +
+                 `Phone: ${phone}\n` +
+                 `Address: ${address}\n` +
+                 `City: ${city}\n` +
+                 `Message: ${message}`;
+
+    const phoneNumber = '+94772863414';  
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
-    
+
     window.open(url, '_blank');
 });
 </script>
 
-    </main>
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-content">
 
-    <footer>
-        <div class="footer-content">
-            <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762789981/logo_wtabhm.png" alt="Sun & Son's Solar Energy Logo" class="footer-logo">
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <a href="#hero">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#services">Services</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="footer-contact">
-                <h4>Contact Us</h4>
-                <p>44/14/4, Sanasa Siyawasa Shoping Complex,Kandy Road,Kalagedihena</p>
-                <p>Phone: <a href="tel:+94 77 396 4804">+9477 396 4804</a></p>
-                <p>Email: <a href="sunsonssolarenergy@gmail.com">sunsonssolarenergy@gmail.com</a></p>
-            </div>
-            <div class="footer-social">
-                <h4>Follow Us</h4>
-                <a href="#" target="_blank" aria-label="Facebook"><img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="Facebook" class="social-icon"></a>
-                <a href="#" target="_blank" aria-label="Instagram"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="social-icon"></a>
-                <a href="#" target="_blank" aria-label="LinkedIn"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="social-icon"></a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Sun & Son's Solar Energy. All Rights Reserved.</p>
-        </div>
-    </footer>
+        <img src="https://res.cloudinary.com/dt10f7l4l/image/upload/v1762789981/logo_wtabhm.png" 
+             alt="Sun & Sons Solar Energy Logo" class="footer-logo">
 
-    <script src="script.js"></script>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="#hero">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p>44/14/4, Sanasa Siyawasa Shopping Complex, Kandy Road, Kalagedihena</p>
+            <p>Phone: <a href="tel:+94773964804">+94 77 396 4804</a></p>
+            <p>Email: <a href="mailto:sunsonssolarenergy@gmail.com">sunsonssolarenergy@gmail.com</a></p>
+        </div>
+
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" class="social-icon"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" class="social-icon"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" class="social-icon"></a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Sun & Son's Solar Energy. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<style>
+footer {
+    background: #111;
+    color: #ddd;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 35px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-logo {
+    width: 150px;
+    margin: auto;
+}
+
+.footer-links h4,
+.footer-contact h4,
+.footer-social h4 {
+    margin-bottom: 10px;
+    color: #00c97f;
+}
+
+.footer-links a,
+.footer-contact p,
+.footer-contact a {
+    display: block;
+    margin: 6px 0;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #00c97f;
+}
+
+.social-icon {
+    width: 35px;
+    margin: 5px;
+    filter: brightness(1.2);
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #aaa;
+}
+</style>
+
+<script src="script.js"></script>
+
+</main>
 </body>
 </html>
